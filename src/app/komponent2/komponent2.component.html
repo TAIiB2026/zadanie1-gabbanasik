@@ -1,0 +1,21 @@
+<h3 appPodkreslenie style="cursor: pointer;">
+    Reaktor: {{ nazwaReaktora }}
+  </h3>
+
+<p>Aktualna temperatura: {{ temperatura }}</p>
+<button (click)="zwiekszTemperature()"> 
+      Zwiększ temperaturę o 10
+</button>
+  
+<p *ngIf="temperatura >= 100" >
+      Osiągnięto maksymalną temperaturę!
+</p>
+<p *ngIf="temperatura < 16" >
+    Rdzeń reaktora jest zimny
+</p>
+<p *ngIf="temperatura >= 16 && temperatura<90" >
+   Temperatura reaktora jest w normie
+</p>
+<p *ngIf="temperatura >=90" >
+    Reaktor jest w stanie krytycznym
+ </p>
