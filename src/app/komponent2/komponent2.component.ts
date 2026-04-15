@@ -7,14 +7,14 @@ import { Component, Input,signal, computed } from '@angular/core';
   styles: ``
 })
 export class Komponent2Component {
-@Input() nazwaReaktora: string='';//Przyjecie nazwy od rodzica
+@Input() nazwaReaktora: string='';
 
   temperaturaSignal = signal(0);
 
   komunikatSignal = computed(() => {
     const temp = this.temperaturaSignal(); 
     if (temp < 16) return 'Rdzeń reaktora jest zimny, temperatura poniżej 16.';
-    if (temp <= 90) return 'Temperatura reaktora jest w normie od 16 do 90.';
+    if (temp < 90) return 'Temperatura reaktora jest w normie od 16 do 90.';
     return 'Reaktor jest w stanie krytycznym powyżej 90.';
   });
 
