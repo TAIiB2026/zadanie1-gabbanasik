@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Komponent2Component } from './komponent2/komponent2.component';
 import { PodkreslenieDirective } from './podkreslenie.directive';
+import { ListaStandaloneComponent } from './lista-standalone/lista-standalone.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PodkreslenieDirective } from './podkreslenie.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ListaStandaloneComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
